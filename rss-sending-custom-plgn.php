@@ -1,9 +1,8 @@
 <?php
-
 /*
   Plugin Name: Activate RSS Thumbnail Images
   Description: Custom code for Activate RSS Thumbnail Images
-  Version: 1.1
+  Version: 1.2
   License: A "Slug" license name e.g. GPL2
 */
 
@@ -34,9 +33,13 @@ add_filter('the_content_feed', 'add_custom_rss_image_size');
 
 
 // Update Checker
-require_once plugin_dir_path( __FILE__ ) . 'inc/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/ChesterX/rss-sending-custom-plgn/',
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/ChesterX/rss-sending-custom-plgn',
     __FILE__,
     'rss-sending-custom-plgn'
 );
+
+$myUpdateChecker->setBranch('main');
