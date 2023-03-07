@@ -3,7 +3,7 @@
 /*
   Plugin Name: Activate RSS Thumbnail Images
   Description: Custom code for Activate RSS Thumbnail Images
-  Version: 1.0
+  Version: 1.1
   License: A "Slug" license name e.g. GPL2
 */
 
